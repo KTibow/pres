@@ -1,0 +1,113 @@
+@import url("https://rsms.me/inter/inter.css");
+:root {
+  font-family: InterVariable, Inter, Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  accent-color: rgb(var(--m3-scheme-primary));
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: solid 0 currentColor;
+}
+*:not(h1, h2, h3, h4, h5, h6, strong) {
+  font: inherit;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+button {
+  cursor: pointer;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+  :root,
+  ::backdrop {
+    --m3-scheme-primary: 90 88 146;
+    --m3-scheme-on-primary: 255 255 255;
+    --m3-scheme-primary-container: 226 223 255;
+    --m3-scheme-on-primary-container: 66 64 120;
+    --m3-scheme-inverse-primary: 195 192 255;
+    --m3-scheme-secondary: 94 92 113;
+    --m3-scheme-on-secondary: 255 255 255;
+    --m3-scheme-secondary-container: 227 224 249;
+    --m3-scheme-on-secondary-container: 70 69 89;
+    --m3-scheme-tertiary: 122 83 104;
+    --m3-scheme-on-tertiary: 255 255 255;
+    --m3-scheme-tertiary-container: 255 216 234;
+    --m3-scheme-on-tertiary-container: 96 60 80;
+    --m3-scheme-error: 186 26 26;
+    --m3-scheme-on-error: 255 255 255;
+    --m3-scheme-error-container: 255 218 214;
+    --m3-scheme-on-error-container: 147 0 10;
+    --m3-scheme-background: 252 248 255;
+    --m3-scheme-on-background: 27 27 33;
+    --m3-scheme-surface: 252 248 255;
+    --m3-scheme-on-surface: 27 27 33;
+    --m3-scheme-surface-variant: 228 225 236;
+    --m3-scheme-on-surface-variant: 71 70 79;
+    --m3-scheme-inverse-surface: 49 48 54;
+    --m3-scheme-inverse-on-surface: 243 239 247;
+    --m3-scheme-outline: 120 118 128;
+    --m3-scheme-outline-variant: 200 197 208;
+    --m3-scheme-shadow: 0 0 0;
+    --m3-scheme-scrim: 0 0 0;
+    --m3-scheme-surface-dim: 220 217 224;
+    --m3-scheme-surface-bright: 252 248 255;
+    --m3-scheme-surface-container-lowest: 255 255 255;
+    --m3-scheme-surface-container-low: 246 242 250;
+    --m3-scheme-surface-container: 240 236 244;
+    --m3-scheme-surface-container-high: 234 231 239;
+    --m3-scheme-surface-container-highest: 229 225 233;
+    --m3-scheme-surface-tint: 90 88 146;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+  :root,
+  ::backdrop {
+    --m3-scheme-primary: 195 192 255;
+    --m3-scheme-on-primary: 43 42 96;
+    --m3-scheme-primary-container: 66 64 120;
+    --m3-scheme-on-primary-container: 226 223 255;
+    --m3-scheme-inverse-primary: 90 88 146;
+    --m3-scheme-secondary: 199 196 221;
+    --m3-scheme-on-secondary: 47 46 66;
+    --m3-scheme-secondary-container: 70 69 89;
+    --m3-scheme-on-secondary-container: 227 224 249;
+    --m3-scheme-tertiary: 234 185 209;
+    --m3-scheme-on-tertiary: 71 38 57;
+    --m3-scheme-tertiary-container: 96 60 80;
+    --m3-scheme-on-tertiary-container: 255 216 234;
+    --m3-scheme-error: 255 180 171;
+    --m3-scheme-on-error: 105 0 5;
+    --m3-scheme-error-container: 147 0 10;
+    --m3-scheme-on-error-container: 255 218 214;
+    --m3-scheme-background: 19 19 24;
+    --m3-scheme-on-background: 229 225 233;
+    --m3-scheme-surface: 19 19 24;
+    --m3-scheme-on-surface: 229 225 233;
+    --m3-scheme-surface-variant: 71 70 79;
+    --m3-scheme-on-surface-variant: 200 197 208;
+    --m3-scheme-inverse-surface: 229 225 233;
+    --m3-scheme-inverse-on-surface: 49 48 54;
+    --m3-scheme-outline: 146 143 154;
+    --m3-scheme-outline-variant: 71 70 79;
+    --m3-scheme-shadow: 0 0 0;
+    --m3-scheme-scrim: 0 0 0;
+    --m3-scheme-surface-dim: 19 19 24;
+    --m3-scheme-surface-bright: 57 56 63;
+    --m3-scheme-surface-container-lowest: 14 14 19;
+    --m3-scheme-surface-container-low: 27 27 33;
+    --m3-scheme-surface-container: 32 31 37;
+    --m3-scheme-surface-container-high: 42 41 47;
+    --m3-scheme-surface-container-highest: 53 52 58;
+    --m3-scheme-surface-tint: 195 192 255;
+  }
+}
