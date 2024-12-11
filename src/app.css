@@ -1,6 +1,12 @@
 @import url("https://rsms.me/inter/inter.css");
+@font-face {
+  font-family: 'Virgil';
+  src: url('https://excalidraw.nyc3.cdn.digitaloceanspaces.com/fonts/Virgil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
-  font-family: InterVariable, Inter, Roboto, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: InterVariable, Inter, Roboto, system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   accent-color: rgb(var(--m3-scheme-primary));
