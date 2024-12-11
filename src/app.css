@@ -10,7 +10,7 @@
   margin: 0;
   border: solid 0 currentColor;
 }
-*:not(h1, h2, h3, h4, h5, h6, strong) {
+*:not(h1, h2, h3, h4, h5, h6, strong, text) {
   font: inherit;
 }
 body {
