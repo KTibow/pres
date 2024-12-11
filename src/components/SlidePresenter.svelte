@@ -19,6 +19,8 @@
       },
       files: slides[currentSlide].files,
     });
+    const style = svg.querySelector("style");
+    style.innerHTML = style.innerHTML.replaceAll("@excalidraw/excalidraw@undefined", "@excalidraw/excalidraw@latest");
 
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", "100%");
