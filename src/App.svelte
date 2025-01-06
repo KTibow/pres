@@ -6,6 +6,7 @@
   let currentSlide = 0;
   let slides = [{ elements: [], appState: {}, files: {} }];
   let isPresenting = false;
+  let beingUnloaded = false;
 
   const savedSlides = localStorage.getItem("slides");
   if (savedSlides) {
@@ -53,6 +54,8 @@
   }
 
   function handleSlideChange(elements: any, appState: any, files: any) {
+    if (beingUnloaded) return;
+
     slides[currentSlide] = { elements, appState, files };
     slides = slides;
   }
@@ -74,7 +77,7 @@
   }
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={handleKeydown} on:beforeunload={() => (beingUnloaded = true)} />
 
 {#if !isPresenting}
   <SlideEditor

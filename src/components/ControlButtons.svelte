@@ -6,6 +6,26 @@
   export let slides: Array<{ elements: any[]; appState: any; files: any }>;
   export let onClearAll: () => void;
 
+  function importFromJson() {
+    const input = prompt("Paste your slides JSON here:");
+    if (!input) {
+      alert("Input something");
+      return;
+    }
+
+    try {
+      const newSlides = JSON.parse(input);
+      if (Array.isArray(newSlides) && newSlides.length > 0) {
+        localStorage.slides = input;
+        location.reload();
+      } else {
+        alert("Invalid slides format");
+      }
+    } catch (e) {
+      alert("Invalid JSON format");
+    }
+  }
+
   async function exportToPDF() {
     const printWindow = window.open("", "_blank");
     if (!printWindow) {
@@ -53,6 +73,7 @@ margin: 0;
     {isPresenting ? "Exit" : "Present"}
   </button>
   <button class="export-button" on:click={exportToPDF}> Export PDF </button>
+  <button class="import-button" on:click={importFromJson}> Import </button>
   <button class="clear-button" on:click={onClearAll}> Clear All </button>
 </div>
 
@@ -79,7 +100,8 @@ margin: 0;
   }
 
   .present-button,
-  .export-button {
+  .export-button,
+  .import-button {
     padding: 0.5rem 1rem;
   }
 
